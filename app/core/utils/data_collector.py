@@ -26,6 +26,8 @@ class DataCollector:
             result = conn.execute(text("SELECT * FROM SensorData"))
 
             df_result = pd.DataFrame(result.fetchall(), columns=result.keys())
+            
+            df_result["id"] = df_result.index + 1
 
             api_result = df_result.to_json(orient="records")
 
