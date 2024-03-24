@@ -12,14 +12,14 @@ app = create_app()
 @app.route('/status', methods=['GET'])
 def status():
     """Indicate the status of the api"""
-    return (json.dumps({"message":  'DudeWheresMyLambo API Status : Running!'}),
+    return (json.dumps({"message":  'Flask core API Status : Running!'}),
             200, {"ContentType": "application/json"})
 
 
 @app.route('/', methods=['GET'])
 def home():
     """Welcome the user on a request to home"""
-    return (json.dumps({"message": 'Welcome to the DudeWheresMyLambo API'}),
+    return (json.dumps({"message": 'Welcome to the Flask Core API'}),
             200, {"ContentType": "application/json"})
 
 

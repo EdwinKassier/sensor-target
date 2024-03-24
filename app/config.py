@@ -11,7 +11,7 @@ load_dotenv()
 class BaseConfig(object):
     ''' Base config class. '''
 
-    APP_NAME = environ.get('APP_NAME') or 'flask-boilerplate'
+    APP_NAME = environ.get('APP_NAME') or 'flask-api'
     ORIGINS = ['*']
     EMAIL_CHARSET = 'UTF-8'
     API_KEY = environ.get('API_KEY')
