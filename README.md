@@ -1,24 +1,16 @@
 ## Introduction
 
-Project Delos answers the question: If I had bought a crypto currency when it first appeared on the public exchange, would I have enough money to buy a lambo if I sold my coins in the last month?
-
-This is the Flask backend version for the system
+This is a flask based repository aimed at ingesting and providing an api for a static dataset of sensor IOT data
 
 ## Requirements
 * Python3
-* Pipenv
+* Docker Desktop
 
 ## Getting started
 
-1. Source the virtual environment ```[pipenv shell]```
-2. Install the dependencies ```[pipenv install]```
+1. Build the docker image by running ```docker compose build``` , this will create and store your image with all relevant pip libraries pre-installed in your Docker Desktop enviornment 
+2. To run the docker image you can use ```docker compose up```, thi will start the image and the flask process within it, you can find the targetable endpoints in the provided ```openapi-3.0.yaml``` file on your localhost (http://127.0.0.1:8080/)
 
-
-## Run the application
-You will need two terminals pointed to the frontend and backend directories to start the servers for this application.
-
-1. To run the backend, make sure you have started the pipenv shell using ```[pipenv shell]```
-2. Run this command to start the backend server: ```[python run.py]``` (You have to run this command while you are sourced into the virtual environment)
 
 ## Understanding the API
 The structure of the api (including parameters required, expected responses etc.) has been set out in the openapi.yaml file, this adheres to the OpenAPI 3.0 structure, and is consistent with tools like Swagger.
@@ -28,7 +20,7 @@ For further learnings you can look at the Flask_Tutorial.md file
 ## Test the application
 All the tests for this api are functional tests using pytest
 
-1. To run the test suite, use the following command:  ```[python -m pytest]```
+1. To run the test suite, open the docker desktop program and open the ```exec``` tab, when in this tab use the following command:  ```pytest``` to run all available tests
 
 
 ## The Build Pipeline
